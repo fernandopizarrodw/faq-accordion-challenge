@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    
+}
+body{
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: 400;
+
+    font-size: 16px;
+    font-family: Work Sans, sans-serif;
+    line-height: 1.5;
+    /* background-image: url(/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position:top; */
+    position: relative;
+     }
+   
+     body::before {
+        content: "";
+        position:fixed ;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px; /* Define la altura que quieres para la imagen de fondo */
+        background-image: url(/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+        background-size: cover; /* Cubre el ancho y ajusta la altura dentro de la altura definida */
+        background-repeat: no-repeat;
+        background-position: top;
+        z-index: -1; /* Coloca el pseudo-elemento detrás del contenido principal */
+      }
+
+    
+a{
+    text-decoration: none;
+    color: #333;
+}
+.icon-minus{
+    display: none;
+}
+details[open] .icon-plus {
+    display: none; /* Ocultar el icono de más cuando el details está abierto */
+}
+
+details[open] .icon-minus {
+    display: block; /* Mostrar el icono de menos cuando el details está abierto */
+}
+main{
+    max-width: 550px;
+    margin: 150px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #333;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 20px; 
+    min-height: 50px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    position: relative; /* Para que esté por encima del pseudo-elemento */
+    background-color: hsl(0, 100%, 100%); 
+}
+.answer p{
+    padding-left: 5px;
+    text-align: left;
+    color: #706773;
+    font-size: 15px;
+    margin-top: 7px;
+
+}
+main h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+    padding-left: 80px;
+}
+li{
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+p{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+    padding-left: 10px;
+}
+.faq-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0;
+    font-size: 4rem;
+  }
+.faq-header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1px;
+    text-align:left;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.icon-star{
+    margin-right: 30px;
+    margin-left: 15px;
+    width: auto; /* O un valor específico como '20px' */
+    height: auto;
+}
+details{
+    border:none;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+h2:hover{
+    color: #b326ef;
+}
+summary{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+
+}
+.toggle-button{
+    border: none;
+    cursor: pointer;
+}
+
+.attribution{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (max-width: 576px) {
+    body::before {
+      background-image: url(/faq-accordion-main/assets/images/background-pattern-mobile.svg);
+    }
+  
+    summary h2 {
+      max-width: calc(100% - 40px); /* Ejemplo: 100% del ancho del summary menos un espacio estimado para el botón */
+      white-space: normal; /* Asegúrate de que el wrap esté permitido */
+      font-size: 0.9rem; /* Reduce el tamaño de la fuente para móvil si es necesario */
+    }
+  
+    summary {
+      padding-right: 25px; /* Reduce el padding derecho del summary para dar más espacio al texto */
+    }
+  
+   
+  }
